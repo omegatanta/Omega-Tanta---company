@@ -1344,7 +1344,7 @@ table.orders-table td.orders-td-wrap{ white-space:normal; max-width:220px; }
 
 <div class="scanbar">
   <span class="rec"><span class="rec-dot"></span> LIVE PRICE LIST</span>
-  <span id="clock" class="mono">2026-07-17 04:45:55</span>
+  <span id="clock" class="mono">2026-07-17 20:11:55</span>
 </div>
 
 <header>
@@ -1475,9 +1475,9 @@ table.orders-table td.orders-td-wrap{ white-space:normal; max-width:220px; }
       </div>
       <div class="grid">
         
-          <div class="card   " data-key="0-1">
+          <div class="card  in-cart " data-key="0-1">
             
-            
+            <span class="in-cart-tag">✓ في السلة</span>
             <span class="cbracket tl"></span><span class="cbracket br"></span>
             
       <div class="card-img-wrap">
@@ -1494,15 +1494,19 @@ table.orders-table td.orders-td-wrap{ white-space:normal; max-width:220px; }
             
               <div class="qty-row">
                 
-                  <button class="order-now-btn" data-key="0-1" data-out="0" type="button">🛒 اطلب الآن</button>
+                  <div class="qty-stepper">
+                    <button class="qty-btn minus" data-key="0-1" type="button">−</button>
+                    <input class="qty-val" data-key="0-1" type="number" inputmode="numeric" min="1" value="1">
+                    <button class="qty-btn plus" data-key="0-1" type="button">+</button>
+                  </div>
                 
               </div>
             
           </div>
         
-          <div class="card   " data-key="0-2">
+          <div class="card  in-cart " data-key="0-2">
             
-            
+            <span class="in-cart-tag">✓ في السلة</span>
             <span class="cbracket tl"></span><span class="cbracket br"></span>
             
       <div class="card-img-wrap">
@@ -1519,15 +1523,19 @@ table.orders-table td.orders-td-wrap{ white-space:normal; max-width:220px; }
             
               <div class="qty-row">
                 
-                  <button class="order-now-btn" data-key="0-2" data-out="0" type="button">🛒 اطلب الآن</button>
+                  <div class="qty-stepper">
+                    <button class="qty-btn minus" data-key="0-2" type="button">−</button>
+                    <input class="qty-val" data-key="0-2" type="number" inputmode="numeric" min="1" value="1">
+                    <button class="qty-btn plus" data-key="0-2" type="button">+</button>
+                  </div>
                 
               </div>
             
           </div>
         
-          <div class="card   " data-key="0-3">
+          <div class="card  in-cart " data-key="0-3">
             
-            
+            <span class="in-cart-tag">✓ في السلة</span>
             <span class="cbracket tl"></span><span class="cbracket br"></span>
             
       <div class="card-img-wrap">
@@ -1544,7 +1552,11 @@ table.orders-table td.orders-td-wrap{ white-space:normal; max-width:220px; }
             
               <div class="qty-row">
                 
-                  <button class="order-now-btn" data-key="0-3" data-out="0" type="button">🛒 اطلب الآن</button>
+                  <div class="qty-stepper">
+                    <button class="qty-btn minus" data-key="0-3" type="button">−</button>
+                    <input class="qty-val" data-key="0-3" type="number" inputmode="numeric" min="1" value="1">
+                    <button class="qty-btn plus" data-key="0-3" type="button">+</button>
+                  </div>
                 
               </div>
             
@@ -1979,9 +1991,9 @@ table.orders-table td.orders-td-wrap{ white-space:normal; max-width:220px; }
             
           </div>
         
-          <div class="card   " data-key="0-0">
+          <div class="card  in-cart " data-key="0-0">
             
-            
+            <span class="in-cart-tag">✓ في السلة</span>
             <span class="cbracket tl"></span><span class="cbracket br"></span>
             
       <div class="card-img-wrap">
@@ -1998,7 +2010,11 @@ table.orders-table td.orders-td-wrap{ white-space:normal; max-width:220px; }
             
               <div class="qty-row">
                 
-                  <button class="order-now-btn" data-key="0-0" data-out="0" type="button">🛒 اطلب الآن</button>
+                  <div class="qty-stepper">
+                    <button class="qty-btn minus" data-key="0-0" type="button">−</button>
+                    <input class="qty-val" data-key="0-0" type="number" inputmode="numeric" min="1" value="1">
+                    <button class="qty-btn plus" data-key="0-0" type="button">+</button>
+                  </div>
                 
               </div>
             
@@ -22698,7 +22714,7 @@ table.orders-table td.orders-td-wrap{ white-space:normal; max-width:220px; }
 
 <button class="float-cart" id="cartFloatBtn" type="button" aria-label="سلة الطلبات">
   🧾 <span class="cart-label">سلة الطلبات</span>
-  <span class="cart-badge" id="cartBadge" style="display: flex;">10</span>
+  <span class="cart-badge" id="cartBadge" style="display: flex;">4</span>
 </button>
 
 <!-- ================= [جديد - المرحلة 6.2] زر إشعارات العميل ================= -->
@@ -23305,9 +23321,7 @@ table.orders-table td.orders-td-wrap{ white-space:normal; max-width:220px; }
         <input id="ordersSearchInput" type="text" placeholder="ابحث بالاسم، الهاتف، رقم الطلب، الشركة...">
         <span class="icon">⌕</span>
       </div>
-      <select id="ordersStatusFilter" class="edit-toggle gear-btn" title="فلترة حسب حالة الطلب">
-        <option value="">🔎 كل الحالات</option>
-      </select>
+      <select id="ordersStatusFilter" class="edit-toggle gear-btn" title="فلترة حسب حالة الطلب"><option value="">🔎 كل الحالات</option><option value="جديد">جديد</option></select>
       <select id="ordersSortBySelect" class="edit-toggle gear-btn" title="الفرز حسب">
         <option value="timestamp">فرز: تاريخ الوصول</option>
         <option value="orderDate">فرز: تاريخ الطلب</option>
@@ -23332,10 +23346,8 @@ table.orders-table td.orders-td-wrap{ white-space:normal; max-width:220px; }
 
     <div class="section-divider"></div>
 
-    <div id="ordersCenterResultCount"></div>
-    <div id="ordersTableWrap" class="orders-table-wrap" style="margin-top:8px;">
-      <div class="cart-empty" id="ordersCenterEmptyState">دوس على "🔄 تحديث" عشان تجيب أحدث الطلبات من الشيت.</div>
-    </div>
+    <div id="ordersCenterResultCount">62 طلب معروض من إجمالي 62</div>
+    <div id="ordersTableWrap" class="orders-table-wrap" style="margin-top:8px;"><table class="orders-table"><thead><tr><th>Order ID</th><th>تاريخ الوصول</th><th>العميل</th><th>الهاتف</th><th>الشركة</th><th>الإجمالي</th><th>حالة الدفع</th><th>حالة الطلب</th><th>—</th></tr></thead><tbody><tr><td class="mono">ORD-20260717-002</td><td>2026-07-17 20:11</td><td class="orders-td-wrap">صس</td><td class="mono">129898378783</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,535 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('63')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-002</td><td>2026-07-17 19:31</td><td class="orders-td-wrap">صس</td><td class="mono">129898378783</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,535 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('62')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-009</td><td>2026-07-17 02:36</td><td class="orders-td-wrap">حامد</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,535 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('61')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-001</td><td>2026-07-17 02:36</td><td class="orders-td-wrap">محمد أحمد الرفاعي</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,035 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('60')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-009</td><td>2026-07-17 02:17</td><td class="orders-td-wrap">حامد</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,535 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('59')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-001</td><td>2026-07-17 02:17</td><td class="orders-td-wrap">محمد أحمد الرفاعي</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,035 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('58')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-009</td><td>2026-07-17 00:54</td><td class="orders-td-wrap">حامد</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,535 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('57')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-001</td><td>2026-07-17 00:54</td><td class="orders-td-wrap">محمد أحمد الرفاعي</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,035 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('56')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-009</td><td>2026-07-17 00:54</td><td class="orders-td-wrap">حامد</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,535 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('55')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-001</td><td>2026-07-17 00:54</td><td class="orders-td-wrap">محمد أحمد الرفاعي</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,035 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('54')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-009</td><td>2026-07-17 00:47</td><td class="orders-td-wrap">حامد</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,535 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('53')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-009</td><td>2026-07-17 00:47</td><td class="orders-td-wrap">حامد</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,535 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('52')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-001</td><td>2026-07-17 00:46</td><td class="orders-td-wrap">محمد أحمد الرفاعي</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,035 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('51')">عرض التفاصيل</button></td></tr><tr><td class="mono">—</td><td>2026-07-17 00:46</td><td class="orders-td-wrap">محمد أحمد الرفاعي</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,035 ج.م</td><td><span class="orders-status-badge ">—</span></td><td><span class="orders-status-badge ">—</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('50')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-009</td><td>2026-07-17 00:46</td><td class="orders-td-wrap">حامد</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,535 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('49')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-001</td><td>2026-07-17 00:46</td><td class="orders-td-wrap">محمد أحمد الرفاعي</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,035 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('48')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-009</td><td>2026-07-17 00:36</td><td class="orders-td-wrap">حامد</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,535 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('47')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-001</td><td>2026-07-17 00:36</td><td class="orders-td-wrap">محمد أحمد الرفاعي</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,035 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('46')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-009</td><td>2026-07-17 00:36</td><td class="orders-td-wrap">حامد</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,535 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('45')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-001</td><td>2026-07-17 00:36</td><td class="orders-td-wrap">محمد أحمد الرفاعي</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,035 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('44')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-009</td><td>2026-07-17 00:36</td><td class="orders-td-wrap">حامد</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,535 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('43')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-001</td><td>2026-07-17 00:36</td><td class="orders-td-wrap">محمد أحمد الرفاعي</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,035 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('42')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-009</td><td>2026-07-17 00:30</td><td class="orders-td-wrap">حامد</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,535 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('41')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-001</td><td>2026-07-17 00:30</td><td class="orders-td-wrap">محمد أحمد الرفاعي</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,035 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('40')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-009</td><td>2026-07-17 00:29</td><td class="orders-td-wrap">حامد</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,535 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('39')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-001</td><td>2026-07-17 00:29</td><td class="orders-td-wrap">محمد أحمد الرفاعي</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,035 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('38')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-011</td><td>2026-07-17 00:28</td><td class="orders-td-wrap">حامد</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,535 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('37')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-011</td><td>2026-07-17 00:28</td><td class="orders-td-wrap">حامد</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,535 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('36')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-010</td><td>2026-07-17 00:28</td><td class="orders-td-wrap">حامد</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,535 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('35')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-010</td><td>2026-07-17 00:28</td><td class="orders-td-wrap">حامد</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,535 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('34')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-009</td><td>2026-07-17 00:26</td><td class="orders-td-wrap">حامد</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,535 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('33')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-009</td><td>2026-07-17 00:26</td><td class="orders-td-wrap">حامد</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,535 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('32')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-001</td><td>2026-07-17 00:26</td><td class="orders-td-wrap">محمد أحمد الرفاعي</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,035 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('31')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-001</td><td>2026-07-17 00:26</td><td class="orders-td-wrap">محمد أحمد الرفاعي</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,035 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('30')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-009</td><td>2026-07-17 00:25</td><td class="orders-td-wrap">حامد</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,535 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('29')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-009</td><td>2026-07-17 00:25</td><td class="orders-td-wrap">حامد</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,535 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('28')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-001</td><td>2026-07-17 00:23</td><td class="orders-td-wrap">محمد أحمد الرفاعي</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,035 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('27')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-001</td><td>2026-07-17 00:21</td><td class="orders-td-wrap">محمد أحمد الرفاعي</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,035 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('26')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-008</td><td>2026-07-17 00:11</td><td class="orders-td-wrap">محمد أحمد الرفاعي</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,035 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('25')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-007</td><td>2026-07-17 00:11</td><td class="orders-td-wrap">محمد أحمد الرفاعي</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,035 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('24')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-008</td><td>2026-07-17 00:11</td><td class="orders-td-wrap">محمد أحمد الرفاعي</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,035 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('23')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-007</td><td>2026-07-17 00:11</td><td class="orders-td-wrap">محمد أحمد الرفاعي</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,035 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('22')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-006</td><td>2026-07-17 00:09</td><td class="orders-td-wrap">محمد أحمد الرفاعي</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,035 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('21')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-006</td><td>2026-07-17 00:09</td><td class="orders-td-wrap">محمد أحمد الرفاعي</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,035 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('20')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-005</td><td>2026-07-17 00:08</td><td class="orders-td-wrap">محمد أحمد الرفاعي</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,035 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('19')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-005</td><td>2026-07-17 00:08</td><td class="orders-td-wrap">محمد أحمد الرفاعي</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,035 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('18')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-004</td><td>2026-07-17 00:07</td><td class="orders-td-wrap">محمد أحمد الرفاعي</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,035 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('17')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-004</td><td>2026-07-17 00:07</td><td class="orders-td-wrap">محمد أحمد الرفاعي</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,035 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('16')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-001</td><td>2026-07-17 00:06</td><td class="orders-td-wrap">محمد أحمد الرفاعي</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,035 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('15')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-001</td><td>2026-07-17 00:06</td><td class="orders-td-wrap">محمد أحمد الرفاعي</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,035 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('14')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-003</td><td>2026-07-17 00:06</td><td class="orders-td-wrap">محمد أحمد الرفاعي</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,035 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('13')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-003</td><td>2026-07-17 00:06</td><td class="orders-td-wrap">محمد أحمد الرفاعي</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,035 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('12')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-002</td><td>2026-07-17 00:06</td><td class="orders-td-wrap">محمد أحمد الرفاعي</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,035 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('11')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-002</td><td>2026-07-17 00:05</td><td class="orders-td-wrap">محمد أحمد الرفاعي</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,035 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('10')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-001</td><td>2026-07-17 00:05</td><td class="orders-td-wrap">محمد أحمد الرفاعي</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,035 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('9')">عرض التفاصيل</button></td></tr><tr><td class="mono">ORD-20260717-001</td><td>2026-07-17 00:05</td><td class="orders-td-wrap">محمد أحمد الرفاعي</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,035 ج.م</td><td><span class="orders-status-badge orders-status-unpaid">غير مدفوع</span></td><td><span class="orders-status-badge orders-status-new">جديد</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('8')">عرض التفاصيل</button></td></tr><tr><td class="mono">—</td><td>2026-07-16 21:56</td><td class="orders-td-wrap">محمود</td><td class="mono">100054555</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">470 ج.م</td><td><span class="orders-status-badge ">—</span></td><td><span class="orders-status-badge ">—</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('7')">عرض التفاصيل</button></td></tr><tr><td class="mono">—</td><td>2026-07-16 21:49</td><td class="orders-td-wrap">أحمد</td><td class="mono">100054555</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">470 ج.م</td><td><span class="orders-status-badge ">—</span></td><td><span class="orders-status-badge ">—</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('6')">عرض التفاصيل</button></td></tr><tr><td class="mono">—</td><td>2026-07-16 05:28</td><td class="orders-td-wrap">الشاعر</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,110 ج.م</td><td><span class="orders-status-badge ">—</span></td><td><span class="orders-status-badge ">—</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('5')">عرض التفاصيل</button></td></tr><tr><td class="mono">—</td><td>2026-07-16 05:15</td><td class="orders-td-wrap">الشاعر</td><td class="mono">1208084346</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">2,110 ج.م</td><td><span class="orders-status-badge ">—</span></td><td><span class="orders-status-badge ">—</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('4')">عرض التفاصيل</button></td></tr><tr><td class="mono">—</td><td>2026-07-16 00:31</td><td class="orders-td-wrap">السيد</td><td class="mono">زبمبمؤ.</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">4,285 ج.م</td><td><span class="orders-status-badge ">—</span></td><td><span class="orders-status-badge ">—</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('3')">عرض التفاصيل</button></td></tr><tr><td class="mono">—</td><td>2026-07-15 20:48</td><td class="orders-td-wrap">محمد</td><td class="mono">112265645</td><td class="orders-td-wrap">أوميجا طنطا</td><td class="mono">3,165 ج.م</td><td><span class="orders-status-badge ">—</span></td><td><span class="orders-status-badge ">—</span></td><td><button type="button" class="orders-details-btn" onclick="openOrderDetailsPlaceholder('2')">عرض التفاصيل</button></td></tr></tbody></table></div>
 
     <div class="modal-actions" style="flex-wrap:wrap;">
       <button id="ordersCenterModalClose" class="btn-cancel" type="button" style="flex:1 1 100%;">إغلاق</button>
@@ -24573,7 +24585,7 @@ const PROMO = JSON.parse(document.getElementById('promo-data').textContent);
    README-GOOGLE-SHEETS-ORDERS.md for full setup steps). Leaving it empty simply skips the
    Sheets save and the WhatsApp button keeps working exactly as before — nothing breaks. */
 // [ربط جديد - المرحلة الأولى] متغير رابط Google Apps Script Web App
-const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxtKQMh-m0MUTLasregsZu4YqUpz8BHY5vuEUu5murRHdY2c-0Ik6g22F9i1mCbrxw8xA/exec";
+const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxYQYxKlEmtmG53YsMxR9ZdN9M1_jU4CS8oKhKmnIJoSvVwMYW6KaJBDsYqHTNbvUuGCw/exec";
 const GAS_ORDERS_WEBHOOK_URL = WEB_APP_URL; // <-- تم الربط: يشير الآن لنفس رابط WEB_APP_URL أعلاه
 
 /* ================= [مرحلة: نظام استقبال الطلبات] دوال مساعدة موحّدة =================
@@ -24677,12 +24689,28 @@ async function sendOrderToGoogleSheetOnce(payload){
   const logicalOk = data ? (data.ok !== false) : true;
 
   if(!httpOk){
+    // [إصلاح] رسالة خطأ حقيقية تفرّق بين 403 (صلاحيات النشر/Deploy) و404 (رابط غلط/محذوف)
+    // و5xx (خطأ داخل Apps Script نفسه)، بدل ok:false بدون أي تفاصيل.
+    let reason;
+    if(res.status === 403) reason = 'ممنوع (403) — راجع صلاحيات نشر الـ Web App في Apps Script (لازم تكون "Anyone").';
+    else if(res.status === 404) reason = 'الرابط غير موجود (404) — تأكد أن رابط الـ Web App صحيح ولم يتغيّر بعد إعادة نشر جديدة.';
+    else if(res.status >= 500) reason = `خطأ داخل Apps Script نفسه (${res.status}) — راجع سجل التنفيذات (Executions) في محرر Apps Script.`;
+    else reason = `فشل الاتصال بالسيرفر (HTTP ${res.status} ${res.statusText || ''})`.trim();
     console.error('[GAS ORDER] فشل الإرسال: حالة HTTP غير ناجحة.', res.status, resText);
-    return {ok:false};
+    return {ok:false, httpStatus: res.status, error: reason, rawResponse: resText};
   }
   if(!logicalOk){
+    const reason = (data && data.error) ? String(data.error) : 'السيرفر رجّع فشل (ok:false) بدون تفاصيل إضافية.';
     console.error('[GAS ORDER] فشل الإرسال: السيرفر رجّع ok:false.', data);
-    return {ok:false};
+    return {ok:false, error: reason, rawResponse: resText};
+  }
+  if(data === null){
+    const looksLikeLogin = /accounts\.google\.com|ServiceLogin/i.test(resText || '');
+    const reason = looksLikeLogin
+      ? 'السيرفر رجّع صفحة تسجيل دخول جوجل بدل بيانات — الرابط غير منشور للجميع (Anyone)، راجع إعدادات النشر (Deploy) في Apps Script.'
+      : 'استجابة السيرفر ليست JSON صالح (ربما CORS أو خطأ غير متوقع في Apps Script).';
+    console.error('[GAS ORDER] استجابة غير متوقعة:', resText);
+    return {ok:false, error: reason, rawResponse: resText};
   }
 
   console.log('[GAS ORDER] تم إرسال الطلب بنجاح وتخزينه في Google Sheet.');
@@ -24706,9 +24734,12 @@ async function sendOrderToGoogleSheet(payload){
     try{
       return await sendOrderToGoogleSheetOnce(payload);
     }catch(err2){
-      // [Debug] طباعة أي خطأ يحدث أثناء الإرسال (شبكة، CORS، رابط خاطئ، إلخ)
       console.error('[GAS ORDER] حدث خطأ أثناء إرسال الطلب إلى Google Apps Script (بعد إعادة المحاولة):', err2);
-      return {ok:false, error: err2 && err2.message};
+      const isNetworkOrCors = err2 && (err2.name === 'TypeError' || /Failed to fetch|NetworkError|Load failed/i.test(err2.message || ''));
+      const reason = isNetworkOrCors
+        ? 'تعذّر الوصول إلى السيرفر — تأكد من اتصال الإنترنت، ومن أن رابط الـ Web App صحيح ومنشور بصلاحية "Anyone"، فقد يكون هذا خطأ CORS أو رابط غير صحيح.'
+        : (err2 && err2.message) || 'خطأ غير معروف أثناء الإرسال.';
+      return {ok:false, error: reason, rawError: err2 && (err2.stack || String(err2))};
     }
   }
 }
@@ -24857,7 +24888,13 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 
-const CART_STORAGE_KEY = 'omega_tanta_cart_v1';
+// [إصلاح - المرحلة 2] المفتاح كان ثابتًا في كل النسخ (مطور/شركة/عميل)، فلو
+// اتفتحت أكثر من نسخة على نفس الجهاز/المسار كانت سلة العميل وسلة الشركة
+// بتتشارك نفس التخزين وتتداخل مع بعض. نربط المفتاح بنوع الملف (data-file-mode
+// اللي بتحدده buildExportHTML() لكل نسخة مُصدَّرة) بحيث نسخة العميل لها مفتاح
+// سلة منفصل تمامًا عن نسخة الشركة/المطور، بدون التأثير على أي بيانات مشتركة
+// أخرى (الكتالوج، الأسعار، العروض، الفواتير... كلها تبقى كما هي بدون تغيير).
+const CART_STORAGE_KEY = 'omega_tanta_cart_v1' + ((typeof document !== 'undefined' && document.documentElement.getAttribute('data-file-mode') === 'customer') ? '__customer' : '');
 let CART = {}; // key "secIdx-itemIdx" -> qty
 /* ================= استعادة السلة المحفوظة (Local Storage فقط) =================
    لا تُحمَّل السلة المحفوظة تلقائيًا داخل CART عند فتح الصفحة. بدلاً من ذلك تُحفظ
@@ -24922,7 +24959,10 @@ function clearCartAfterSuccessfulSend(){
    يحفظ حقول الاسم/الهاتف/العنوان/طريقة الشحن/شركة الشحن/طريقة الدفع في localStorage بمجرد
    تغييرها، ويعيد تعبئتها تلقائيًا عند فتح الصفحة من جديد. لا علاقة له بميزة SAVED_CUSTOMERS
    (دليل العملاء)، وهو منطق مستقل وبسيط لا يغيّر أي تصميم أو عناصر واجهة موجودة. */
-const ORDER_CUSTOMER_FORM_KEY = 'omega_tanta_order_customer_form_v1';
+// [إصلاح - المرحلة 2] نفس منطق فصل CART_STORAGE_KEY أعلاه: بيانات نموذج
+// العميل (اسم/هاتف/عنوان/شحن/دفع) خاصة بجهاز/جلسة العميل، فمينفعش تتشارك
+// المفتاح مع نسخة الشركة أو المطور على نفس الجهاز.
+const ORDER_CUSTOMER_FORM_KEY = 'omega_tanta_order_customer_form_v1' + ((typeof document !== 'undefined' && document.documentElement.getAttribute('data-file-mode') === 'customer') ? '__customer' : '');
 const ORDER_CUSTOMER_FORM_FIELDS = ['custName','custPhone','custAddress','custShipping','custShippingCompany','custPayment'];
 
 function saveOrderCustomerFormField(fieldId){
@@ -30909,7 +30949,8 @@ function attemptSendOrderToSheet(payload, waUrl){
       renderCartModal();
       render();
     } else {
-      showOrderSendStatus('error', '⚠️ تعذّر حفظ الطلب على السيرفر (تأكد من اتصال الإنترنت). تم حفظ الطلب محليًا وسيتم إرساله تلقائيًا عند توفر الإنترنت، وتقدر كمان ترسله مباشرة عبر واتساب. <button id="retryOrderSendBtn" type="button" class="btn-cancel" style="margin-top:6px;padding:6px 14px;">إعادة المحاولة الآن</button>');
+      const detail = result && result.error ? ('<br><span style="opacity:.85">السبب: ' + result.error + '</span>') : '';
+      showOrderSendStatus('error', '⚠️ تعذّر حفظ الطلب على السيرفر.' + detail + '<br>تم حفظ الطلب محليًا وسيتم إرساله تلقائيًا عند توفر الإنترنت، وتقدر كمان ترسله مباشرة عبر واتساب. <button id="retryOrderSendBtn" type="button" class="btn-cancel" style="margin-top:6px;padding:6px 14px;">إعادة المحاولة الآن</button>');
       // [مرحلة 2 - أوفلاين] حفظ الطلب في قائمة الانتظار المحلية لإعادة المحاولة تلقائيًا لاحقًا.
       addOrderToPendingQueue(payload, 'طلب عبر واتساب', false);
       const retryBtn = document.getElementById('retryOrderSendBtn');
@@ -32086,7 +32127,9 @@ async function runGuardedElectronicSend(kindLabel, buildAndSendFn){
     if(result && (result.ok || result.skipped)){
       markOrderSignatureAsSent(signature);
       showElectronicSendSuccess();
-    } else {
+    } else if(!result || !result.error){
+      // [إصلاح] لا نعرض رسالة عامة هنا إلا لو buildAndSendFn لم يعرض بالفعل رسالة
+      // خطأ مفصّلة (result.error) — كان بيستبدل الرسالة التفصيلية برسالة عامة دايمًا.
       showOrderSendStatus('error', `⚠️ تعذّر إرسال ${kindLabel}. تأكد من اتصال الإنترنت وحاول مرة أخرى.`);
     }
   }catch(e){
@@ -32149,7 +32192,8 @@ async function sendOrderDataElectronically(){
       // الانتظار المحلية لإعادة المحاولة تلقائيًا لاحقًا، ونعرض رسالة توضح ذلك للعميل.
       if(!result || (!result.ok && !result.skipped)){
         addOrderToPendingQueue(fullPayload, 'بيانات الطلب', false);
-        showOrderSendStatus('error', '⚠️ تعذّر إرسال بيانات الطلب الآن. تم حفظ الطلب محليًا وسيتم إرساله تلقائيًا عند توفر الإنترنت.');
+        const detail = result && result.error ? (' السبب: ' + result.error) : '';
+        showOrderSendStatus('error', '⚠️ تعذّر إرسال بيانات الطلب الآن.' + detail + ' تم حفظ الطلب محليًا وسيتم إرساله تلقائيًا عند توفر الإنترنت.');
       }
       return result;
     });
@@ -32198,7 +32242,8 @@ async function sendOrderPdfElectronically(){
       // كما تم الاتفاق، الملفات تحتاج إعادة إرسال يدوي) في قائمة الانتظار المحلية.
       if(!result || (!result.ok && !result.skipped)){
         addOrderToPendingQueue(fullPayload, 'ملف PDF', true);
-        showOrderSendStatus('error', '⚠️ تعذّر إرسال ملف PDF الآن. تم حفظ بيانات الطلب محليًا (سيتم إرسالها تلقائيًا)، لكن هتحتاج تعيد إرسال ملف PDF يدويًا لما يرجع النت.');
+        const detail = result && result.error ? (' السبب: ' + result.error) : '';
+        showOrderSendStatus('error', '⚠️ تعذّر إرسال ملف PDF الآن.' + detail + ' تم حفظ بيانات الطلب محليًا (سيتم إرسالها تلقائيًا)، لكن هتحتاج تعيد إرسال ملف PDF يدويًا لما يرجع النت.');
       }
       return result;
     });
@@ -32233,7 +32278,8 @@ async function sendOrderImageElectronically(){
       // كما تم الاتفاق، الملفات تحتاج إعادة إرسال يدوي) في قائمة الانتظار المحلية.
       if(!result || (!result.ok && !result.skipped)){
         addOrderToPendingQueue(fullPayload, 'الصورة', true);
-        showOrderSendStatus('error', '⚠️ تعذّر إرسال الصورة الآن. تم حفظ بيانات الطلب محليًا (سيتم إرسالها تلقائيًا)، لكن هتحتاج تعيد إرسال الصورة يدويًا لما يرجع النت.');
+        const detail = result && result.error ? (' السبب: ' + result.error) : '';
+        showOrderSendStatus('error', '⚠️ تعذّر إرسال الصورة الآن.' + detail + ' تم حفظ بيانات الطلب محليًا (سيتم إرسالها تلقائيًا)، لكن هتحتاج تعيد إرسال الصورة يدويًا لما يرجع النت.');
       }
       return result;
     });
@@ -33815,7 +33861,7 @@ const CURRENT_STORAGE_KEYS = [
   CART_STORAGE_KEY, CUSTOM_ITEMS_KEY, OFFERS_STORAGE_KEY, OFFER_ORDER_SEQ_KEY,
   OFFER_NOTIFY_DISMISSED_KEY, CUSTOMERS_KEY, PRICE_HISTORY_KEY, OWNER_PASSWORD_KEY,
   UI_THEME_KEY, INVOICE_SEQ_KEY, INVOICE_ARCHIVE_KEY, QUOTE_ARCHIVE_KEY, QUOTE_SEQ_KEY,
-  LAST_BACKUP_KEY, SESSION_AUTOSAVE_KEY
+  LAST_BACKUP_KEY, SESSION_AUTOSAVE_KEY, ORDER_CUSTOMER_FORM_KEY
 ];
 // Legacy keys known to have existed in an older version of this project, along with
 // where each one's data should land in the current version.
@@ -34499,6 +34545,16 @@ showCartRestorePrompt();
     });
     currentPreviewMode = mode;
     window.CURRENT_PW_MODE = mode;
+    // [إصلاح] applyBrandToDOM() تحدد عنوان التبويب بناءً على data-file-mode
+    // الثابت على <html> (اللي فضل 'work' طول الوقت هنا لأننا في ملف العمل
+    // الحي مش نسخة مُصدَّرة)، فكان بيفضل يقول "نسخة الشركة" حتى أثناء معاينة
+    // "نسخة العميل" فعليًا — تعارض مباشر بين data-file-mode و CURRENT_PW_MODE.
+    // نعيد حساب العنوان هنا يدويًا حسب وضع المعاينة الحالي الفعلي، من غير
+    // ما نغيّر data-file-mode نفسها ولا نلمس buildExportHTML أو applyBrandToDOM.
+    if(typeof BRAND !== 'undefined' && BRAND && BRAND.name){
+      const previewTitleSuffix = (mode === 'customer') ? ' | قائمة أسعار الجملة' : ' | قائمة أسعار الجملة (نسخة الشركة)';
+      document.title = BRAND.name + previewTitleSuffix;
+    }
     document.querySelectorAll('#previewWorkspaceBar .pw-btn').forEach(btn => {
       btn.classList.toggle('active', btn.dataset.mode === mode);
     });
